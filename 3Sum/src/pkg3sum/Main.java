@@ -32,10 +32,17 @@ public class Main {
                 for(int k = j; k<nums.length;k++){
                     if ( i != j && j != k && i != k && (nums[i] + nums[j] + nums[k] == 0)){
                         System.out.println(" i=" + i + " j=" + j + " k=" + k);
+                        List<Integer> innerList = new ArrayList<Integer>(3);
+                        innerList.add(nums[i]);
+                        innerList.add(nums[j]);
+                        innerList.add(nums[k]);
+                        myList.add(innerList);
                     }
                 }
             }
         }
+        
+        
         
         return myList;
     }
